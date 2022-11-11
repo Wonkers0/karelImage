@@ -1,13 +1,17 @@
-html, body {
-  height: 100%;
-  width: 100%;
+* {
+  padding: 0;
+  margin: 0;
 }
 
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
 
 nav{
   width: 100vw;
   height: 200px;
-  background-image: #ebebeb;
+  background-color: #ebebeb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +20,11 @@ nav{
 
 main{
   width: 100vw;
-  height: calc(100vh - 350px);
-  background-image: linear-gradient(#8aebc3, #b8f8ff, 45deg);
+  height: calc(100vh - 225px);
+  background-image: linear-gradient(45deg, #8aebc3, #b8f8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer{
