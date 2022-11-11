@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+nav{
+  width: 100vw;
+  height: 200px;
+  background-image: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+main{
+  width: 100vw;
+  height: calc(100vh - 350px);
+  background-image: linear-gradient(#8aebc3, #b8f8ff, 45deg);
+}
+
+footer{
+  background-color: #292929;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
