@@ -6,9 +6,11 @@
 html, body {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 nav{
+  position: relative;
   width: 100vw;
   height: 75px;
   background-color: #ebebeb;
@@ -19,12 +21,21 @@ nav{
 }
 
 main{
+  position: relative;
   width: 100vw;
-  height: calc(100vh - 225px);
-  background-image: linear-gradient(45deg, #8aebc3, #b8f8ff);
+  height: 85vh;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+input{
+  width: 300px;
+  height: 25px;
+  outline: none;
 }
 
 footer{
@@ -34,4 +45,109 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.karel{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: -7.5%;
+  bottom: 20vh;
+  transform: rotate(30deg);
+  width: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+  .karel {
+    display: none;
+  }
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-family: 'Readex Pro';
+  font-weight: 800;
+  font-size: 50px;
+  margin-top: 140px;
+  text-transform: uppercase;
+}
+
+.mainArrow{
+  margin-bottom: 5vh;
+  color: #feccff;
+  font-size: 55px;
+  font-weight: 900;
+}
+
+.gradientText {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.github{
+  position: absolute;
+  z-index: 9999;
+  font-size: 35px;
+  font-family: 'Outfit';
+}
+
+.navWave{
+  position: absolute;
+  z-index: 999;
+  transform: rotate(180deg);
+  top: -55px;
+  width: 100vw;
+  height: 40vh;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.creditTitle{
+  font-family: 'Readex Pro';
+  color: #dbdbdb;
+}
+
+.creditSub{
+  font-family: 'Outfit';
+  color: #ffffff;
+}
+
+a{
+  color: #3939fe;
+  font-weight: bold;
+}
+
+button {
+  background-color: #f5cc5824;
+  width: 320px;
+  height: 64px;
+  border: 2px solid #ffe18d;
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 250ms ease, letter-spacing 250ms ease, font-size 250ms ease, font-weight 250ms ease;
+}
+
+button:hover {
+  background-color: #f5cc584f;
+  font-weight: 600;
+  font-size: 23px;
+  letter-spacing: normal;
 }
