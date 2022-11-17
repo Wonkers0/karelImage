@@ -9,22 +9,22 @@ document.querySelector('.github').onclick = () => {
 }
 
 document.querySelector('button').onclick = () => {
-  navigator.clipboard.readText().then(text => {
-    const Http = new XMLHttpRequest();
-    Http.open("POST", 'https://getImagePixels.wonk2.repl.co', true);
-    Http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+  navigator.clipboard.readText().then(text => { // Get URL from clipboard
+    const Http = new XMLHttpRequest(); // HTTP Request to API
+    Http.open("POST", 'https://getImagePixels.wonk2.repl.co', true); // Post request, URL of server, "true" is for Asynchronous request
+    Http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8') // JSON Request Body
     
-    let params = {
+    let params = { // Request Body
       "imageURL": text,
       "width": !parseInt(document.querySelector('#width').value) ? 50 : parseInt(document.querySelector('#width').value),
       "height": !parseInt(document.querySelector('#height').value) ? 50 : parseInt(document.querySelector('#height').value),
       "useCustomSizeProps": !document.querySelector('.useCustomProps').checked
     }
     
-    Http.send(JSON.stringify(params));
+    Http.send(JSON.stringify(params)); // Send HTTP Request to server
     
     Http.onreadystatechange = (e) => {
-      navigator.clipboard.writeText(Http.responseText)
+      navigator.clipboard.writeText(Http.responseText) // Copy response from server
     }
   })
 }
